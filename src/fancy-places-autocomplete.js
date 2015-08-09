@@ -48,33 +48,33 @@ angular.module('fancy-places-autocomplete', []);
       });
     });
 
-    var placeBuilder = function (place) {
-      var _place = {};
-      _place.formatted_address = place.formatted_address;
-      _place.location = {lat: place.geometry.location.G, lon: place.geometry.location.K};
-      return _place;
+    var placeBuilder = function (placeResult) {
+      var place = {};
+      place.formatted_address = place.formatted_address;
+      place.location = {lat: place.geometry.location.G, lon: place.geometry.location.K};
+      return place;
     };
   };
 
   function BaiduAutocompleteService (elem, city) {
     var self = this;
-    var autocomplete = new BMap.Autocomplete({input: elem[0], location: '北京市'});
+    var autocomplete = new BMap.Autocomplete({input: elem[0], location: city});
     var $elem = elem[0];
 
-    autocomplete.addEventListener('onconfirm', function(place) {
+    autocomplete.addEventListener('onconfirm', function(selectedPlace) {
       var val = $elem.value;
       var search = new BMap.LocalSearch(val, {onSearchComplete: function (placeResult) {
-        self.onSearchComplete(placeBuilder(placeResult));
+        self.onSearchComplete(placeBuilder(placeResult, selectedPlace));
       }});
 
       search.search(val);
     });
 
-    var placeBuilder = function (place, city) {
-      var _place = {};
-      _place.formatted_address = [rv.item.value.city, rv.item.value.district].join();
-      _place.location = {lat: place.getPoi(0).point.lat, lon: place.getPoi(0).point.lng};
-      return _place;
+    var placeBuilder = function (placeResult, selectedPlace) {
+      var place = {};
+      place.formatted_address = [selectedPlace.item.value.city, selectedPlace.item.value.district].join();
+      place.location = {lat: placeResult.getPoi(0).point.lat, lon: placeResult.getPoi(0).point.lng};
+      return place;
     };
   };
 
