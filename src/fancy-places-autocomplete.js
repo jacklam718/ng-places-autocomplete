@@ -50,8 +50,8 @@ angular.module('fancy-places-autocomplete', []);
 
     var placeBuilder = function (placeResult) {
       var place = {};
-      place.formatted_address = place.formatted_address;
-      place.location = {lat: place.geometry.location.G, lon: place.geometry.location.K};
+      place.formatted_address = placeResult.formatted_address;
+      place.location = {lat: placeResult.geometry.location.G, lon: placeResult.geometry.location.K};
       return place;
     };
   };
