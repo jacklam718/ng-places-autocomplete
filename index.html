@@ -3,15 +3,17 @@
   <head>
     <title>Fancy Places-Autocomplete</title>
     <link rel="stylesheet" type="text/css" href="lib/tooltipster/css/tooltipster.css">
+    <link rel="stylesheet" type="text/css" href="lib/tooltipster/css/themes/tooltipster-shadow.css">
+    <link rel="stylesheet" type="text/css" href="lib/tooltipster/css/themes/tooltipster-light.css">
+    <link rel="stylesheet" type="text/css" href="lib/tooltipster/css/themes/tooltipster-noir.css">
+    <link rel="stylesheet" type="text/css" href="lib/tooltipster/css/themes/tooltipster-punk.css">
     <link rel="stylesheet" type="text/css" href="src/fancy-places-autocomplete.css">
   </head>
   <body ng-controller="AppCtrl">
     <br><br><br><br><br><br>
-    <input id="autocomplete" places-autocomplete service="'baidu'" tooltip title="This is my div's tooltip message!">
+    <!-- tooltip title="This is my div's tooltip message!" -->
+    <input id="autocomplete" places-autocomplete service="'google'" ng-model="location" map-popup>
     <br><br><br>
-    <div class="tooltip tooltipstered" title="This is my div's tooltip message!" tooltip>
-      This div has a tooltip when you hover over it!
-    </div>
 
     <!-- bower commponents -->
     <script src="bower_components/angular/angular.js"></script>
