@@ -8,11 +8,18 @@
     <link rel="stylesheet" type="text/css" href="lib/tooltipster/css/themes/tooltipster-noir.css">
     <link rel="stylesheet" type="text/css" href="lib/tooltipster/css/themes/tooltipster-punk.css">
     <link rel="stylesheet" type="text/css" href="src/fancy-places-autocomplete.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body ng-controller="AppCtrl">
     <br><br><br><br><br><br>
     <!-- tooltip title="This is my div's tooltip message!" -->
-    <input id="autocomplete" places-autocomplete service="'google'" ng-model="location" map-popup>
+    <div class="places-input-container">
+      <p>
+        Address: {{ location.formatted_address }}, &nbsp; Lat: {{ location.location.lat }}, &nbsp; Lon: {{ location.location.lon }}
+      </p>
+      <input id="autocomplete" class="text-input" places-autocomplete service="'baidu'" city="'北京市'" ng-model="location.formatted_address" map-popup>
+    </div>
+
     <br><br><br>
 
     <!-- bower commponents -->

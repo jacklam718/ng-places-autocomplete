@@ -1,4 +1,3 @@
-// places autocomplete directive
 (function () {
   'restrict';
 
@@ -11,9 +10,6 @@
       query.push(d + '=' + data[d])
     return query.join('&');
   }
-
-  // base class of map service
-  function BaseMapService () {};
 
   function getStaticMapQueryUrl (query) {
     if (this.staticMapApiUrl === undefined) {
@@ -56,7 +52,7 @@
 
     self.placeBuilder = function (placeResult) {
       var place = {};
-      place.formatted_address = placeResult.formatted_address;
+      place.formatted_address = self.elem.val(); //placeResult.formatted_address;
       place.location = {lat: placeResult.geometry.location.G, lon: placeResult.geometry.location.K};
       return place;
     };
@@ -81,14 +77,13 @@
       self.city = city;
       self.onSearchComplete = onSearchComplete;
       self.autocomplete = new BMap.Autocomplete({input: elem[0], location: city});
-      console.log(self.elem)
+
       self.initAutocomplete();
     }
 
     self.initAutocomplete = function () {
       self.autocomplete.addEventListener('onconfirm', function(selectedPlace) {
-        console.log(self.elem.value)
-        var val = self.elem.value;
+        var val = self.elem.val();
         var search = new BMap.LocalSearch(val, {onSearchComplete: function (placeResult) {
           self.onSearchComplete(self.placeBuilder(placeResult, selectedPlace));
         }});
@@ -105,14 +100,18 @@
     };
 
     self.getStaticMapQueryUrl = function (query) {
+      var latLon = [query.center.split(',')[1], query.center.split(',')[0]].join(',');
       var defaultOpts = {width: 400, height: 400};
+      query.center = latLon;
       return getStaticMapQueryUrl.call(this, angular.extend({}, defaultOpts, query));
     };
 
     return self;
   };
 
+  // ******************************
   // places autocomplete directive
+  // ******************************
   function PlacesAutocomplete (GoogleMapService, BaiduMapService) {
     var self = {};
     var serviceProvider = {
@@ -120,7 +119,7 @@
       baidu: BaiduMapService
     };
 
-    self.require = 'ngModel';
+    // self.require = 'ngModel';
     self.scope = {
       city: '=?',
       service: '=?',

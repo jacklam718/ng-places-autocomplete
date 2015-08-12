@@ -4,8 +4,8 @@
   ]);
 
   function AppCtrl ($scope) {
-    $scope.address = "";
     $scope.$on("places-autocomplete:select", function(event, res) {
+      $scope.location = res;
       console.log('AppCtrl', res);
     });
   }

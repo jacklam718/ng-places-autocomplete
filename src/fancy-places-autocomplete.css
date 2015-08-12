@@ -5,3 +5,8 @@
 .tooltipster-default .tooltipster-arrow .tooltipster-arrow-border {
   background-color: white;
 }
+
+.tooltipster-base > .tooltipster-content {
+  line-height: 0;
+  padding: 0;
+}
