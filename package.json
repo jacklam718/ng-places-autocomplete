@@ -1,0 +1,31 @@
+{
+  "name": "ng-fancy-places-autocomplete",
+  "version": "0.0.1",
+  "description": "a fancy places autocomplete angular directive, support google, baidu places autocomplete",
+  "main": "build/ng-fancy-places-autocomplete.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jacklam718/ng-fancy-places-autocomplete.git"
+  },
+  "keywords": [
+    "places",
+    "autocomplete"
+  ],
+  "author": "jack (jacklam718@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jacklam718/ng-fancy-places-autocomplete/issues"
+  },
+  "homepage": "https://github.com/jacklam718/ng-fancy-places-autocomplete",
+  "devDependencies": {
+    "del": "^1.2.1",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-ng-annotate": "^1.1.0",
+    "gulp-uglify": "^1.2.0",
+    "gulp-uglifycss": "^1.0.4"
+  }
+}
