@@ -1,6 +1,11 @@
 # ng-fancy-places-autocomplete
 A simple diective for places autocomplete and quickly preview the place in a map. Now support google places api and baidu places api.
 
+# Demo
+<a href="https://github.com/jacklma718/ng-fancy-places-autocomplete/index.html" target="_blank">
+  DEMO
+</a>
+
 # Usage
 include the required libraries <br>
 this package is required jQuery please include jQuery on your project <br>
@@ -33,3 +38,7 @@ or you can only enable the places autocmplete
 #### Options:
 map-popup &nbsp;&nbsp; - map popup preview window <br>
 city &nbsp;&nbsp; - choose a specific city  &nbsp;&nbsp; # now only for baidu
+
+
+# TODO
+test case
