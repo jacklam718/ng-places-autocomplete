@@ -148,9 +148,9 @@
       content();
     };
 
-    self.controller = function ($scope) {
+    self.controller = ['$scope', function ($scope) {
       self.$scope = $scope;
-    };
+    }];
 
     self.link = function (scope, elem, attr) {
       self.provider = serviceProvider[scope.service];
