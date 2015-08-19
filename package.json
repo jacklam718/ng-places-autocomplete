@@ -4,7 +4,8 @@
   "description": "a fancy places autocomplete angular directive, support google, baidu places autocomplete",
   "main": "build/ng-places-autocomplete.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp"
   },
   "repository": {
     "type": "git",

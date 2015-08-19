@@ -2,7 +2,7 @@
   'restrict';
 
   // regist module
-  angular.module('fancy-places-autocomplete', []);
+  angular.module('ng-places-autocomplete', []);
 
   function constructQueryData(data) {
     var query = [];
@@ -180,7 +180,7 @@
   }
 
   // regist places autocomplete directive
-  angular.module('fancy-places-autocomplete').directive('placesAutocomplete', PlacesAutocomplete);
-  angular.module('fancy-places-autocomplete').factory('GoogleMapService', GoogleMapService);
-  angular.module('fancy-places-autocomplete').factory('BaiduMapService', BaiduMapService);
+  angular.module('ng-places-autocomplete').directive('placesAutocomplete', PlacesAutocomplete);
+  angular.module('ng-places-autocomplete').factory('GoogleMapService', GoogleMapService);
+  angular.module('ng-places-autocomplete').factory('BaiduMapService', BaiduMapService);
 })();

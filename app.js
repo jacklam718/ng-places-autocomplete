@@ -1,6 +1,6 @@
 (function() {
   app = angular.module('ngApp', [
-    'fancy-places-autocomplete'
+    'ng-places-autocomplete'
   ]);
 
   function AppCtrl ($scope) {

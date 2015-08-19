@@ -7,8 +7,8 @@
     "jack lam <jacklam718@gmail.com>"
   ],
   "main": [
-    "src/fancy-places-autocomplete.js",
-    "src/fancy-places-autocomplete.css"
+    "src/ng-places-autocomplete.js",
+    "src/ng-places-autocomplete.css"
   ],
   "license": "MIT",
   "ignore": [
