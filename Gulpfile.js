@@ -21,14 +21,14 @@ gulp.task('scripts', ['clear'], function() {
   return gulp.src(paths.scripts)
     .pipe(ngAnnotate())
     .pipe(uglify())
-    .pipe(concat('ng-fancy-places-autocomplete.js'))
+    .pipe(concat('ng-places-autocomplete.js'))
     .pipe(gulp.dest(dest));
 });
 
 gulp.task('stylesheets', ['clear'], function() {
   return gulp.src(paths.stylesheets)
     .pipe(uglifycss())
-    .pipe(concat('ng-fancy-places-autocomplete.css'))
+    .pipe(concat('ng-places-autocomplete.css'))
     .pipe(gulp.dest(dest));
 })
 

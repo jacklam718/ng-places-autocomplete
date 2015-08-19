@@ -1,8 +1,8 @@
-# ng-fancy-places-autocomplete
-A simple diective for places autocomplete and quickly preview the place in a map. Now support google places api and baidu places api.
+# ng-places-autocomplete
+A fancy and simple diective for places autocomplete and quickly preview the place in a map window. Now support google places api and baidu places api.
 
 # Demo
-<a href="https://github.com/jacklma718/ng-fancy-places-autocomplete/index.html" target="_blank">
+<a href="https://github.com/jacklma718/ng-places-autocomplete/index.html" target="_blank">
   DEMO
 </a>
 
@@ -22,17 +22,17 @@ baidu places api
 
 ```javascript
 Declare a dependency on your angular app
-var ngApp = angular.module('ngApp', ['ng-fancy-places-autocomplete']);
+var ngApp = angular.module('ngApp', ['ng-places-autocomplete']);
 ```
 
 Add the directive to textbox, now enable places autocomplete with a map popup preview option
 ```html
-<input type="text" ng-fancy-places-autocomplete ng-model="location" map-popup>
+<input type="text" ng-places-autocomplete ng-model="location" map-popup>
 ```
 
 or you can only enable the places autocmplete
 ```html
-<input type="text" ng-fancy-places-autocomplete ng-model="location">
+<input type="text" ng-places-autocomplete ng-model="location">
 ```
 
 #### Options:
