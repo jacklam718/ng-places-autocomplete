@@ -7,30 +7,30 @@ A fancy and simple diective for places autocomplete and quickly preview the plac
 </a>
 
 # Usage
-include the required libraries <br>
-this package is required jQuery please include jQuery on your project <br>
+Include the required libraries. <br>
+This package is required jQuery please include jQuery on your project. <br>
 
-google places api:
+#### Google places api:
 ```html
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
 ```
 
-baidu places api
+#### Baidu places api:
 ```html
 <script src="http://api.map.baidu.com/api?v=2.0&ak=YOUR API KEY"></script>
 ```
 
+#### Declare a dependency on your angular app:
 ```javascript
-Declare a dependency on your angular app
 var ngApp = angular.module('ngApp', ['ng-places-autocomplete']);
 ```
 
-Add the directive to textbox, now enable places autocomplete with a map popup preview option
+#### Add the directive to textbox, now enable places autocomplete with a map popup preview option:
 ```html
 <input type="text" ng-places-autocomplete ng-model="location" map-popup>
 ```
 
-or you can only enable the places autocmplete
+#### or you can only enable the places autocmplete:
 ```html
 <input type="text" ng-places-autocomplete ng-model="location">
 ```
@@ -40,5 +40,5 @@ map-popup &nbsp;&nbsp; - map popup preview window <br>
 city &nbsp;&nbsp; - choose a specific city  &nbsp;&nbsp; # now only for baidu
 
 
-# TODO
+# TODO:
 test case
