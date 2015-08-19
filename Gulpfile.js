@@ -10,7 +10,7 @@ dest = 'build';
 
 var paths = {
   scripts: ['src/**/*.js', 'bower_components/tooltipster/js/jquery.tooltipster.js'],
-  stylesheets: ['src/**/*.css', 'bower_components/tooltipster/css/*.css']
+  stylesheets: ['src/**/*.css', 'bower_components/tooltipster/css/**/*.css']
 };
 
 gulp.task('clear', function(cd) {
