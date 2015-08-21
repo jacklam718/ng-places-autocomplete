@@ -6,6 +6,12 @@ A fancy and simple diective for places autocomplete and quickly preview the plac
   DEMO
 </a>
 
+# Install
+#### Bower:
+```bash
+bower install --save ng-fancy-places-autocomplete
+```
+
 # Usage
 Include the required libraries. <br>
 This package is required jQuery please include jQuery on your project. <br>
@@ -30,7 +36,7 @@ var ngApp = angular.module('ngApp', ['ng-places-autocomplete']);
 <input type="text" ng-places-autocomplete ng-model="location" map-popup>
 ```
 
-#### or you can only enable the places autocmplete:
+#### Or you can only enable the places autocmplete:
 ```html
 <input type="text" ng-places-autocomplete ng-model="location">
 ```

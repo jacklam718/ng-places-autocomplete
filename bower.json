@@ -6,6 +6,10 @@
   "authors": [
     "jack lam <jacklam718@gmail.com>"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jacklam718/ng-places-autocomplete.git"
+  },
   "main": [
     "src/ng-places-autocomplete.js",
     "src/ng-places-autocomplete.css"
