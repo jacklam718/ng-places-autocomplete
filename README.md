@@ -30,7 +30,7 @@ This package is required jQuery please include jQuery on your project. <br>
 
 #### Import this library on your project:
 ```html
-<script src="build/ng-places-autocomplete.min.js">
+<script src="build/ng-places-autocomplete.min.js"></script>
 <link rel="stylesheet" href="build/ng-places-autocomplete.min.css">
 ```
 
