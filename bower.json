@@ -2,7 +2,7 @@
   "name": "ng-places-autocomplete",
   "homepage": "https://github.com/jacklam718/ng-places-autocomplete",
   "description": "a fancy places autocomplete angular directive, support google, baidu places autocomplete",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "authors": [
     "jack lam <jacklam718@gmail.com>"
   ],
