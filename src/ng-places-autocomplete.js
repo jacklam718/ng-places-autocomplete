@@ -32,10 +32,13 @@
     var self = this;
     self.staticMapApiUrl = 'https://maps.googleapis.com/maps/api/staticmap';
 
-    self.init = function (elem, onSearchComplete) {
+    self.init = function (elem, country, lang, onSearchComplete) {
       self.elem = elem;
       self.onSearchComplete = onSearchComplete;
-      self.autocomplete = new google.maps.places.Autocomplete(elem[0]);
+      self.autocomplete = new google.maps.places.Autocomplete(elem[0], {
+        language: lang,
+        componentRestrictions: {country: country}
+      });
       self.placesService = new google.maps.places.PlacesService(elem[0]);
 
       self.initAutocomplete();
@@ -122,6 +125,8 @@
     // self.require = 'ngModel';
     self.scope = {
       city: '=?',
+      country: '=?',
+      lang: '=?',
       service: '=?',
       mapPopup: '=?',
       mapPopupConfig: '=?',
@@ -150,6 +155,21 @@
 
     self.controller = ['$scope', function ($scope) {
       self.$scope = $scope;
+
+      var defaultOpts = {};
+      // city for baidu
+      defaultOpts.city = 'beijing';
+      // country for google
+      defaultOpts.country = 'us';
+      defaultOpts.service = 'google';
+      defaultOpts.lang = 'en';
+
+      // assgin default options if haven't assign options
+      ['city', 'country', 'service', 'lang'].forEach(function(k) {
+        if ($scope[k] === undefined || $scope[k] === '') {
+          $scope[k] = defaultOpts[k];
+        }
+      });
     }];
 
     self.link = function (scope, elem, attr) {
@@ -167,7 +187,7 @@
       scope.$watch('city', function (oldVal, newVal) {
         switch (scope.service) {
           case 'google':
-            self.provider.init(elem, self.onSearchComplete);
+            self.provider.init(elem, scope.country, scope.lang, self.onSearchComplete);
             break;
           case 'baidu':
             self.provider.init(elem, scope.city, self.onSearchComplete);
