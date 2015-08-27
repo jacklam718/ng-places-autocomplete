@@ -17,10 +17,13 @@
       <p>
         Address: {{ location.formatted_address }}, &nbsp; Lat: {{ location.location.lat }}, &nbsp; Lon: {{ location.location.lon }}
       </p>
-      <input id="autocomplete" class="text-input" places-autocomplete service="'baidu'" city="'北京市'" ng-model="location.formatted_address" map-popup>
+      <input id="autocomplete" class="text-input" places-autocomplete service="'google'" country="'us'" lang="'us'" ng-model="location.formatted_address" map-popup>
     </div>
 
     <br><br><br>
+
+    <!-- google, baidu client api -->
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
 
     <!-- bower commponents -->
     <script src="bower_components/angular/angular.js"></script>
