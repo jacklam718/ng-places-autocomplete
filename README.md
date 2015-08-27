@@ -1,8 +1,10 @@
 # ng-places-autocomplete
 A fancy and simple diective for places autocomplete and quickly preview the place in a map window. Now support google places api and baidu places api.
 
+<img  src="https://raw.github.com/jacklam718/ng-places-autocomplete/gh-pages/screenshots/demo1.png" width="450px" height="350px" />
+
 # Demo
-<a href="https://github.com/jacklma718/ng-places-autocomplete/index.html" target="_blank">
+<a href="http://jacklam718.github.io/ng-places-autocomplete" target="_blank">
   DEMO
 </a>
 
@@ -44,7 +46,8 @@ var ngApp = angular.module('ngApp', ['ng-places-autocomplete']);
 #### Options:
 map-popup &nbsp;&nbsp; - map popup preview window <br>
 city &nbsp;&nbsp; - choose a specific city  &nbsp;&nbsp; # now only for baidu
-
+country &nbsp;&nbsp; - choose a country &nbsp;&nbsp; # now only for google
+lang &nbsp;&nbsp; - choose language &nbsp;&nbsp; # now only for google
 
 # TODO:
 test case
