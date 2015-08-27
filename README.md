@@ -20,12 +20,18 @@ This package is required jQuery please include jQuery on your project. <br>
 
 #### Google places api:
 ```html
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+<script src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
 ```
 
 #### Baidu places api:
 ```html
 <script src="http://api.map.baidu.com/api?v=2.0&ak=YOUR API KEY"></script>
+```
+
+#### Import this library on your project:
+```html
+<script src="build/ng-places-autocomplete.min.js">
+<link rel="stylesheet" href="build/ng-places-autocomplete.min.css">
 ```
 
 #### Declare a dependency on your angular app:
