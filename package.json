@@ -2,7 +2,7 @@
   "name": "ng-places-autocomplete",
   "version": "0.0.1",
   "description": "a fancy places autocomplete angular directive, support google, baidu places autocomplete",
-  "main": "build/ng-places-autocomplete.js",
+  "main": "build/ng-places-autocomplete.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp"

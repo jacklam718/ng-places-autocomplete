@@ -11,8 +11,8 @@
     "url": "git://github.com/jacklam718/ng-places-autocomplete.git"
   },
   "main": [
-    "src/ng-places-autocomplete.js",
-    "src/ng-places-autocomplete.css"
+    "src/ng-places-autocomplete.min.js",
+    "src/ng-places-autocomplete.min.css"
   ],
   "license": "MIT",
   "ignore": [
