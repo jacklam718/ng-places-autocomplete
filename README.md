@@ -51,9 +51,9 @@ var ngApp = angular.module('ngApp', ['ng-places-autocomplete']);
 
 #### Options:
 map-popup &nbsp;&nbsp; - map popup preview window <br>
-city &nbsp;&nbsp; - choose a specific city  &nbsp;&nbsp; # now only for baidu
-country &nbsp;&nbsp; - choose a country &nbsp;&nbsp; # now only for google
-lang &nbsp;&nbsp; - choose language &nbsp;&nbsp; # now only for google
+city &nbsp;&nbsp; - choose a specific city  &nbsp;&nbsp; # now only for baidu <br>
+country &nbsp;&nbsp; - choose a country &nbsp;&nbsp; # now only for google <br>
+lang &nbsp;&nbsp; - choose language &nbsp;&nbsp; # now only for google <br>
 
 # TODO:
 test case
