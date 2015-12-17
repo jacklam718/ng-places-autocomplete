@@ -56,7 +56,7 @@
     self.placeBuilder = function (placeResult) {
       var place = {};
       place.formatted_address = self.elem.val(); //placeResult.formatted_address;
-      place.location = {lat: placeResult.geometry.location.G, lon: placeResult.geometry.location.K};
+      place.location = {lat: placeResult.geometry.location.lat(), lng: placeResult.geometry.location.lng()};
       return place;
     };
 
@@ -98,7 +98,7 @@
     self.placeBuilder = function (placeResult, selectedPlace) {
       var place = {};
       place.formatted_address = [selectedPlace.item.value.city, selectedPlace.item.value.district].join();
-      place.location = {lat: placeResult.getPoi(0).point.lat, lon: placeResult.getPoi(0).point.lng};
+      place.location = {lat: placeResult.getPoi(0).point.lat, lng: placeResult.getPoi(0).point.lng};
       return place;
     };
 
@@ -141,9 +141,9 @@
     };
 
     self.getStaticMap = function (origin, content) {
-      if (typeof self.scope.ngModel === 'object' && self.scope.ngModel.location.lat && self.scope.ngModel.location.lon) {
-        var lat = self.scope.ngModel.location.lat, lon = self.scope.ngModel.location.lon;
-        var latLon = [lat, lon].join(',');
+      if (typeof self.scope.ngModel === 'object' && self.scope.ngModel.location.lat && self.scope.ngModel.location.lng) {
+        var lat = self.scope.ngModel.location.lat, lng = self.scope.ngModel.location.lng;
+        var latLon = [lat, lng].join(',');
         var url = self.provider.getStaticMapQueryUrl({center: latLon});
         var $imageElement = angular.element('<img>');
 
