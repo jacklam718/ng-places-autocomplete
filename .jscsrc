@@ -1,0 +1,8 @@
+{
+  "esnext": true,
+  "requireTrailingComma": null,
+  "disallowSpaceAfterObjectKeys": true,
+  "disallowSpacesInFunctionExpression": null,
+  "disallowSpacesInNamedFunctionExpression": null,
+  "disallowSpacesInFunctionDeclaration": null
+}
