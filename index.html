@@ -15,7 +15,7 @@
     <!-- tooltip title="This is my div's tooltip message!" -->
     <div class="places-input-container">
       <p>
-        Address: {{ location.formatted_address }}, &nbsp; Lat: {{ location.location.lat }}, &nbsp; Lon: {{ location.location.lon }}
+        Address: {{ location.formatted_address }}, &nbsp; Lat: {{ location.location.lat }}, &nbsp; Lng: {{ location.location.lng }}
       </p>
       <input id="autocomplete" class="text-input" places-autocomplete service="'google'" country="'us'" lang="'us'" ng-model="location.formatted_address" map-popup>
     </div>
